@@ -1,0 +1,75 @@
+Username: student8@ContextServices.onmicrosoft.com
+Password: Password@05092020
+
+hemlatav/Secure$1234567
+Azure Architect Technologies (AZ-303T00)
+Trainings Main Points ::
+Tea1 : 11:00 - 11:10
+Lunch : 12:45 - 1:30
+Tea2 : 3:40 - 4:00
+
+VPC(Virtual Private Cloud) - VN (Virtual Network)
+
+Launch Instance - Launch VM ( Virtual Machiene)
+
+VPC Peering  - VNet Peering
+
+Comparision b/w : 300 & 303 :
+https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VzwB
+
+https://docs.microsoft.com/en-us/azure/architecture/browse/
+
+https://docs.microsoft.com/en-us/azure/architecture/patterns/
+
+https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits
+
+https://docs.microsoft.com/en-us/azure/virtual-network/create-peering-different-subscriptions
+
+https://docs.microsoft.com/en-us/azure/virtual-network/create-peering-different-subscriptions#cli
+
+https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
+
+https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-general
+
+https://azure.microsoft.com/en-us/pricing/calculator/
+
+https://docs.microsoft.com/en-us/azure/virtual-machines/spot-vms
+
+https://docs.microsoft.com/en-us/azure/virtual-machines/windows/dedicated-hosts
+
+https://github.com/mahendra-shinde/az-303
+
+Question :
+Priority on NSG ?
+Availability set & Zones - diff ? what to chose & when ?
+
+1. Create Resource Group `YOUR_NAME-group01` in location `southeastasia`
+ 
+2. Create Virtual network in `group01` and name `Vnet1`
+ 
+    IPAddress:  20.0.0.0/16
+    Subnet1:    20.0.1.0/24
+ 
+3.  Create A new VM ScaleSet
+ 
+    ScaleSet Name:  ScaleSet1
+    ResourceGroup: YOUR_NAME-group01
+    Location:       southeastasia
+    Image:          Ubuntu 18.04
+    Size:           DS1v2
+    Network:        VNet1
+    Use LB?         Yes
+    LB Type:        Azure load balancer
+    Initial Instance Count: 2
+    
+4. Storage Group
+
+
+Window : 
+Install-WindowsFeature -name Web-Server -IncludeManagementTools
+cd \inetpub\wwwroot
+set-content -path .\index.html -Value "Hello $env:COMPUTERNAME" 
+
+port 80 - load balancer
+port 22 - nAT
+Port 3389 - for Win RDP
